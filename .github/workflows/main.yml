@@ -29,6 +29,4 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           port: ${{ secrets.PORT }}
           passphrase: ${{ secrets.SSH_PASSPHRASE }}
-          script: |
-          cd /mn/nas/auto_deploy
-          ./deploy.sh
+          script: sh /mn/nas/auto_deploy/deploy.sh
