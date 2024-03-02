@@ -1,6 +1,5 @@
 echo "Deploying changes..."
-# Open folder\
-cd /mnt/nas/auto-deploy
+
 # Pull changes from the live branch
 git pull
 
