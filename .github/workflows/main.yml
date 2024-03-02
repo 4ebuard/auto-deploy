@@ -21,7 +21,7 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      - name: setup SSH1
+      - name: setup SSH
         uses: appleboy/ssh-action@v1.0.3
         with:
           host: ${{ secrets.HOST }} # uses secrets stored in the Secrets tab
@@ -29,4 +29,6 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           port: ${{ secrets.PORT }}
           passphrase: ${{ secrets.SSH_PASSPHRASE }}
-          script: sh /mnt/nas/auto-deploy/deploy.sh
+          script: |
+          cd /mn/nas/auto_deploy
+          ./deploy.sh
