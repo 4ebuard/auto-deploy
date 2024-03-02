@@ -1,0 +1,11 @@
+version: "3"
+
+services:
+  auto-deploy:
+    build:
+      context: ../../
+      dockerfile: Dockerfile
+    image: auto-deploy
+    ports:
+      - "5566:3000"
+    restart: unless-stopped
